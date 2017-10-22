@@ -44,7 +44,7 @@ function viewCart() {
       break;
     default:
       return console.log(`In your cart, you have ${temp.slice(0,-1).join(', ')} and ${temp[temp.length -1]}.`)
-      
+
   }
 }
 
