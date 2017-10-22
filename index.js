@@ -56,15 +56,17 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var index = 0
-
-  for(var i = 0; i < cart.length; ++i){
-    if(Object.keys(cart[i])[0] == item){
-      cart.splice(i,1)
-      return cart
+    if (cart.length === 0) {
+         console.log("Your shopping cart is empty.")
+  } else {
+    var items = [];
+    for (var i = 0; i < cart.length; i++) {
+      for (var item in cart[i]) {
+        items.push(item + " at $" + cart[i][item])
+      }
     }
-  }
-  console.log("That item is not in your cart.")
+    console.log("In your cart, you have " + items.join(", ") + ".");
+    }
 }
 
 function placeOrder(cardNumber) {
