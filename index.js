@@ -56,11 +56,11 @@ function removeFromCart(item) {
 
   for(i; i < size; ++i){
     if(cart[i].hasOwnProperty(item)) {
-      itemInCart = true
+      inCart = true
       cart.splice(i,1)
     }
   }
-  if(!itemInCart){
+  if(!nCart){
     console.log("That item is not in your cart.")
   }
   return cart
