@@ -21,16 +21,30 @@ function viewCart() {
   var size = cart.length
   var items = []
   var i = 0
+  var count = 0
+  var price = []
+  var temp = []
 
   if(size == 0){
     console.log("Your shopping cart is empty")
   }else{
-    for(i; i < size; ++i){
-      for(var item in cart[i]){
-        items.push(item + " at $" + cart[i][item])
-      }
+    for(i;i < size; ++i){
+      items.push(Object.keys(cart[i])[0])
+      price.push(cart[i][Object.keys(cart[i])[0]])
+      temp.push(`${items[i]} at $${price[i]}`)
+      ++count
     }
-    console.log("In your cart, you have " + items.join(", ") + ".");
+  }
+  switch(count){
+    case 1:
+      return console.log(`In your cart, you have ${temp[0]}.`)
+      break;
+    case 2:
+      return console.log(`In your cart, you have ${temp[0]} and ${temp[1]}`)
+      break;
+    default:
+      return console.log(`In your cart, you have ${temp.slice(0,-1).join(', ')} and ${temp[temp.length -1]}.`)
+      
   }
 }
 
