@@ -43,7 +43,7 @@ function viewCart() {
       return console.log(`In your cart, you have ${temp[0]} and ${temp[1]}.`)
       break;
     default:
-      return console.log(`In your cart, you have ${temp.slice(0,-1).join(', ')} and ${temp[temp.length -1]}.`)
+      return console.log(`In your cart, you have ${temp.slice(0,-1).join(', ')} and ${temp.slice(-1)}.`)
 
   }
 }
