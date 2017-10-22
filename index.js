@@ -53,7 +53,7 @@ function removeFromCart(item) {
   var inCart = false
   var i = 0
   var size = cart.length
-  
+
   for(i; i < size; ++i){
     if(cart[i].hasOwnProperty(item)) {
       itemInCart = true
