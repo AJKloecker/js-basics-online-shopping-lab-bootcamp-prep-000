@@ -21,7 +21,7 @@ function viewCart() {
   var size = cart.length
   var items = []
   var i = 0
-  
+
   if(size === 0){
     console.log("Your shopping cart is empty")
   }else{
