@@ -55,6 +55,7 @@ function removeFromCart(item) {
   for (var i = 0; i < cart.length; i++) {
     for (var item in cart[i]) {
       items.push(item + " at $" + cart[i][item])
+      return cart
     }
 }
   console.log("That item is not in your cart.")
