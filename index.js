@@ -25,8 +25,8 @@ function viewCart() {
   var price = []
   var temp = []
 
-  if(size == false){
-    console.log("Your shopping cart is empty")
+  if(size == 0){
+    console.log("Your shopping cart is empty.")
   }else{
     for(i;i < size; ++i){
       items.push(Object.keys(cart[i])[0])
@@ -40,7 +40,7 @@ function viewCart() {
       return console.log(`In your cart, you have ${temp[0]}.`)
       break;
     case 2:
-      return console.log(`In your cart, you have ${temp[0]} and ${temp[1]}`)
+      return console.log(`In your cart, you have ${temp[0]} and ${temp[1]}.`)
       break;
     default:
       return console.log(`In your cart, you have ${temp.slice(0,-1).join(', ')} and ${temp[temp.length -1]}.`)
