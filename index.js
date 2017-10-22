@@ -19,25 +19,19 @@ function addToCart(item) {
 function viewCart() {
   // write your code here
   var size = cart.length
-  var ans  = ""
-  var i    = 0
-  var temp = 0
-
-  if(size == 0){
-    ans = "Your shopping cart is empty."
-    return ans
+  var items = []
+  var i = 0
+  
+  if(size === 0){
+    console.log("Your shopping cart is empty")
   }else{
-    ans = "In your cart, you have "
     for(i; i < size; ++i){
-      if(i == size - 1){
-        temp = cart[i][Object.keys(cart[i])[0]]
-        ans = ans + ` ${Object.keys(cart[i])[0]} at ${temp}.`
-      }else{
-        ans = ans + ` ${Object.keys(cart[i])[0]} at ${temp}`
+      for(var item in cart[i]){
+        items.push(item + " at $" + cart[i][item])
       }
     }
+    console.log("In your cart, you have " + item.join(", ") + ".");
   }
-  return ans
 }
 
 function total() {
