@@ -25,7 +25,7 @@ function viewCart() {
   var price = []
   var temp = []
 
-  if(size == 0){
+  if(size == false){
     console.log("Your shopping cart is empty")
   }else{
     for(i;i < size; ++i){
